@@ -1,0 +1,18 @@
+#int main(){
+#x=EqSolver(a,b);
+#}
+#int EqSolver (int a, int b){
+#return (a+b)(a-b);
+#}
+main:
+addi a0,zero,20
+addi a1,zero,10
+jal ra,EqSolver
+li a0,10
+ecall
+
+EqSolver:
+add t0,a0,a1
+sub t1,a0,a1
+mul a1,t0,t1
+ret
